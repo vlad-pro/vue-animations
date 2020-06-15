@@ -17,6 +17,19 @@
   color: #2c3e50;
 }
 
+button {
+  width: 5em;
+  height: 2em;
+  margin: 0.5em;
+  border-radius: 5px;
+  background: linear-gradient(to right, #16c0b0, #84cf6a);
+  font-size: 1em;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 #nav {
   padding: 30px;
 }
@@ -28,5 +41,15 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.modal {
+  width: 250px;
+  height: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 2%;
+  background-color: #e0e0e0;
 }
 </style>

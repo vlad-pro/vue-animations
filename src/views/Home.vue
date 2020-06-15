@@ -1,18 +1,41 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <button @click="toggleModal">Open</button>
+    <transition name="fade">
+      <div v-if="isOpen" class="modal">
+        <button @click="toggleModal">Close</button>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "Home",
-  components: {
-    HelloWorld
+  data() {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleModal() {
+      this.isOpen = !this.isOpen
+    }
   }
-};
+}
 </script>
+
+<style scoped>
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.5s ease-out;
+}
+</style>
