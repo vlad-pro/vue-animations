@@ -34,6 +34,24 @@ const routes = [
     path: '/cards',
     name: 'cards',
     component: () => import(/* webpackChunkName: "list" */ '../views/Cards.vue')
+  },
+  {
+    path: '/simple',
+    name: 'simple',
+    component: () =>
+      import(/* webpackChunkName: "simple" */ '../views/Simple.vue')
+  },
+  {
+    path: '/stagger',
+    name: 'stagger',
+    component: () =>
+      import(/* webpackChunkName: "stagger" */ '../views/Stagger.vue')
+  },
+  {
+    path: '/state',
+    name: 'state',
+    component: () =>
+      import(/* webpackChunkName: "state" */ '../views/State.vue')
   }
 ]
 
